@@ -1,0 +1,27 @@
+﻿@using System.Globalization
+
+@{
+    var currentCulture = WorkContext.CurrentCulture;
+    var supportedCultures = (IList<string>)Model.SupportedCultures;
+}
+
+<div id="culture-selection">
+    <ul>
+        @foreach (var supportedCulture in supportedCultures) {
+            var culture = CultureInfo.GetCultureInfo(supportedCulture);
+
+            if (culture is object)
+            {
+                var url = Url.Action("ChangeCulture", "AdminCultureSelector", new { area = "Orchard.Localization", culture = supportedCulture, returnUrl = Html.ViewContext.HttpContext.Request.RawUrl });
+
+                <li>
+                    @if (supportedCulture.Equals(currentCulture)) {
+                        <a href="@url">@T("{0} (current)", culture.DisplayName)</a>
+                    } else {
+                        <a href="@url">@culture.DisplayName</a>
+                    }
+                </li>
+            }
+        }
+    </ul>
+</div>

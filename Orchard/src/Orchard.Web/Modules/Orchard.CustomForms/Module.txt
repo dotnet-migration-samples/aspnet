@@ -1,0 +1,14 @@
+Name: Custom Forms
+AntiForgery: enabled
+Author: The Orchard Team
+Website: http://www.orchardproject.net
+Version: 1.10.3
+OrchardVersion: 1.10.3
+LifecycleStatus: Deprecated
+Description: Create custom forms like contact forms or content contributions.
+Features:
+    Orchard.CustomForms:
+        Name: Custom Forms
+        Description: Create custom forms like contact forms or content contributions.
+        Category: Forms
+        Dependencies: Contents, Orchard.Tokens, Orchard.Workflows

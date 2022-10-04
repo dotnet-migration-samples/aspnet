@@ -1,0 +1,14 @@
+﻿Name: Microsoft Azure Services
+AntiForgery: enabled
+Author: The Orchard Team
+Website: http://orchardproject.net
+Version: 1.10.3
+OrchardVersion: 1.10.3
+Description: Provides a set of Orchard service implementations targeting Microsoft Azure services.
+Category: Hosting
+Features:
+    Orchard.Azure.Media:
+        Name: Microsoft Azure Media Storage
+        Description: Activates an Orchard media storage provider that targets Microsoft Azure Blob Storage.
+        Dependencies: Orchard.Azure
+        Category: Hosting    

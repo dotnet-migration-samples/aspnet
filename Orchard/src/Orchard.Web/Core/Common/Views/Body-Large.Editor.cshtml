@@ -1,0 +1,17 @@
+﻿@{
+    var propertyName = Model.PropertyName != null ? (string)Model.PropertyName : "Text";
+
+    var htmlAttributes = new Dictionary<string, object> {
+        {"class", "text large"}
+    };
+
+    if (Model.Required == true) {
+        htmlAttributes["required"] = "required";
+    }
+
+    if (Model.AutoFocus == true) {
+        htmlAttributes["autofocus"] = "autofocus";
+    }
+}
+
+@Html.TextBox(propertyName, (string)Model.Text, htmlAttributes)
