@@ -4,11 +4,6 @@ using System.Data.SqlClient;
 
 namespace eShopWebForms
 {
-    public interface ISqlConnectionFactory
-    {
-        SqlConnection CreateConnection();
-    }
-
     public class ManagedIdentitySqlConnectionFactory : ISqlConnectionFactory
     {
         private readonly AzureServiceTokenProvider _provider;
@@ -29,16 +24,5 @@ namespace eShopWebForms
 
         private string AccessToken
             => _provider.GetAccessTokenAsync("https://database.windows.net/").ConfigureAwait(false).GetAwaiter().GetResult();
-    }
-
-    public class AppSettingsSqlConnectionFactory : ISqlConnectionFactory
-    {
-        public SqlConnection CreateConnection()
-        {
-            return new SqlConnection
-            {
-                ConnectionString = ConfigurationManager.ConnectionStrings["CatalogDBContext"].ConnectionString
-            };
-        }
     }
 }

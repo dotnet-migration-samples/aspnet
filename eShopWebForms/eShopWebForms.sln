@@ -5,9 +5,9 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AE0DD43A-90AF-41CF-84A4-BFF1D57DA8EE}"
 EndProject
-Project("{fae04ec0-301f-11d3-bf4b-00c04f79efbc}") = "eShopWebForms", "src\eShopWebForms\eShopWebForms.csproj", "{4416714A-9BB8-480B-95B3-C2599598E3EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopWebForms", "src\eShopWebForms\eShopWebForms.csproj", "{4416714A-9BB8-480B-95B3-C2599598E3EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopModels", "src\eShopModels\eShopModels.csproj", "{3F114E6D-9496-4716-839C-B7BB23CC8F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShopModels", "src\eShopModels\eShopModels.csproj", "{3F114E6D-9496-4716-839C-B7BB23CC8F04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,11 +27,11 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7BB9F6BE-2470-4251-80B7-0825E02EEA6F}
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4416714A-9BB8-480B-95B3-C2599598E3EC} = {AE0DD43A-90AF-41CF-84A4-BFF1D57DA8EE}
 		{3F114E6D-9496-4716-839C-B7BB23CC8F04} = {AE0DD43A-90AF-41CF-84A4-BFF1D57DA8EE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BB9F6BE-2470-4251-80B7-0825E02EEA6F}
 	EndGlobalSection
 EndGlobal
